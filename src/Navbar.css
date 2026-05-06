@@ -1,0 +1,137 @@
+/* Global Reset */
+@font-face {
+  font-family: "Moralana";
+  src: url("./fonts/Moralana-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  
+  font-family: "Catchy-Mager";
+  src: url("./fonts/Catchy-Mager.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: visible;    
+}
+
+/* Background image */
+.bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("./GK_NEXERGY_4.png");
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Dark overlay for opacity effect */
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+/*background: rgba(239, 241, 245, 0.6);*/
+    background: rgba(0, 0, 0, 0.358); /* subtle glass feel */
+    backdrop-filter: blur(4px);
+    padding: 12px 0;
+ /* 0.2 = 20% dark overlay → 80% image visible */
+  z-index: 1;
+}
+
+/* NAVBAR COMPONENTS */
+.navbar {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  z-index: 3;
+}
+
+/* Main content container to manage logo and links layout */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push logo to left, links block to center */
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 20px;
+}
+
+/* Logo Styling  
+.navbar-logo img {
+  height: 150px; /* Kept from original to preserve detail   
+  display: block;
+}*/
+
+/* Wrapper to group and center the links relative to page */
+.nav-links-wrapper {
+  flex: 1; /* Take up the rest of the available space */
+  display: flex;
+  justify-content: center; /* Center the links *group* on the page */
+}
+
+/* NAV LIST (Holds the items and the complex indicator) */
+.nav-center {
+  position: relative;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+/* MENU ITEMS */
+.nav-center li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* LINKS */
+.nav-center a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 30px;
+  font-family: "Catchy-Mager", Geneva, Tahoma, sans-serif;
+  display: block;
+}
+
+/* HOVER EFFECT for links */
+.nav-center li:hover {
+  background-color: lightgrey;
+}
+
+.nav-center li:hover a {
+  color: #051630;
+}
+
+/* ACTIVE MENU Item Styling */
+.nav-center li.active {
+  background-color: lightgrey;
+}
+
+.nav-center li.active a {
+  color: #051630;
+  font-weight: bold;
+}
+
+/* 🔥 DYNAMIC SLIDING INDICATOR */
+/* These properties are updated dynamically via JS */
+.nav-indicator {
+  position: absolute;
+  bottom: -5px;
+  height: 3px;
+  background: #00d2ff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00d2ff;
+  
+  /* These will be set dynamically */
+  width: var(--indicator-width, 0px);
+  left: var(--indicator-left, 0px);
+}
