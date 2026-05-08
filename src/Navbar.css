@@ -39,7 +39,7 @@
 
 /*background: rgba(239, 241, 245, 0.6);*/
     background: rgba(0, 0, 0, 0.358); /* subtle glass feel */
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
     padding: 12px 0;
  /* 0.2 = 20% dark overlay → 80% image visible */
   z-index: 1;

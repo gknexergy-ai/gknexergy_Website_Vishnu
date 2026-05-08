@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Carousel, Button, Row, Col } from "react-bootstrap";
 import "./Courses.css";
 
-const Courses = [
+const courses = [
   {
     id: "python-ai",
     title: "Python for AI",
@@ -34,7 +34,7 @@ const CarouselComponent = () => {
     setIndex(selectedIndex);
   };
 
-  const selectedCourse = Courses[index];
+  const selectedCourse = courses[index] || courses[0];
 
   return (
     <div className="main-container container-fluid">
@@ -52,7 +52,7 @@ const CarouselComponent = () => {
                 onSelect={handleSelect}
                 interval={3000}
               >
-                {Courses.map((course) => (
+                {courses.map((course) => (
                   <Carousel.Item key={course.id} className="h-100">
 
                     <div className="carousel-image-container">

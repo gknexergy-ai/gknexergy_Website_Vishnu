@@ -44,7 +44,7 @@ body {
 }
 
 .logo {
-  width: 600px;
+  width: 800px;
   animation: float 4s ease-in-out infinite;
 }
 
@@ -69,8 +69,8 @@ body {
 
 /* Main Title (Single Line) */
 .main-title {
-  font-size: 75px;
-  font-weight:700; 
+  font-size: 60px;
+  font-weight:800; 
   /*font-family: 'Inter', 'Poppins', sans-serif;*/
   font-family: "Catchy-Mager", sans-serif;
   white-space: nowrap;
