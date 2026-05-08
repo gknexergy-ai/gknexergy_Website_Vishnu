@@ -60,7 +60,7 @@
   justify-content: space-between; /* Push logo to left, links block to center */
   max-width: 1200px;
   margin-inline: auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 /* Logo Styling  
@@ -96,7 +96,7 @@
 .nav-center a {
   text-decoration: none;
   color: whitesmoke;
-  font-size: 30px;
+  font-size: 20px;
   font-family: "Catchy-Mager", Geneva, Tahoma, sans-serif;
   display: block;
 }

@@ -1,0 +1,187 @@
+/* ============================= */
+/* MAIN */
+/* ============================= */
+.main-container {
+  padding: 20px;
+}
+
+/* 🔥 IMPORTANT WRAPPER */
+.layout-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ============================= */
+/* BOX (PANELS) */
+/* ============================= */
+.box {
+  width: 100%;
+  height: clamp(400px, 70vh, 800px);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* FIX COLUMN HEIGHT */
+.row > div {
+  display: flex;
+}
+
+.row > div > .box {
+  flex: 1;
+}
+
+/* ============================= */
+/* CAROUSEL */
+/* ============================= */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+/* TEXT OVERLAY */
+.carousel-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+/* ============================= */
+/* ROADMAP */
+/* ============================= */
+.roadmap-wrapper {
+  overflow-y: auto;
+}
+
+.roadmap-img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+/* ============================= */
+/* 🔥 CENTER BUTTON */
+/* ============================= */
+
+/* CENTER LAYER (NEW) */
+
+.center-layer {
+    position: relative;
+}
+
+/* BUTTON FIX (FINAL) */
+/*
+.center-enroll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+/* BUTTON STYLE */
+
+.center-enroll-btn {
+  padding: 16px 36px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER */
+.center-enroll-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #0056b3, #0099cc);
+}
+
+/* ============================= */
+/* MODAL */
+/* ============================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .box {
+    height: clamp(300px, 60vh, 600px);
+  }
+
+  .center-enroll {
+    top: 55%;
+    border: 3px solid red;
+  }
+
+  .center-enroll-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* 🔥 WRAPPER (CRITICAL) */
+.layout-wrapper {
+  position: relative;
+}
+
+/* 🔥 FORCE BUTTON ON TOP */
+.center-enroll {
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;   /* 🔥 higher than everything */
+}
+
+/* BUTTON STYLE */
+.center-enroll-btn {
+  padding: 16px 36px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 40px rgba(255, 87, 34, 0.6);
+  cursor: pointer;
+}

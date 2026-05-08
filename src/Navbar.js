@@ -60,8 +60,9 @@ const Navbar = () => {
                 ref={(el) => (itemRefs.current[index] = el)}
                 className={index === activeIndex ? 'active' : ''}
                 onClick={() => setActiveIndex(index)}
-              >
-                <a href={`#${item.replace(/\s+/g, '_')}`}>{item}</a>
+              ><a href={`/${item.replace(/\s+/g, '-')}`}>
+  {item}
+</a>
               </li>
             ))}
           </ul>
